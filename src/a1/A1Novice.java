@@ -5,23 +5,6 @@ import java.util.Scanner;
 public class A1Novice {
 
 	public static void main(String[] args) {
-	
-		/*class Item {
-			
-			int quantity_items;
-			String name_item;
-			double price;
-			
-			Item(int q, String n, double p) {
-				quantity_items = q;
-				name_item = n;
-				price = p;
-			}
-			
-			double total() {
-				return quantity_items * price;
-			}
-		}*/
 		
 		//Class to make customer 
 		
@@ -31,6 +14,7 @@ public class A1Novice {
 			String last_name;
 			int num_items;
 			
+			//constructor for customer
 			Customer(String f, String l, int n){
 				first_name = f;
 				last_name = l;
@@ -40,16 +24,7 @@ public class A1Novice {
 			//Method to print customer name in required format
 			public String name() {
 				return first_name.charAt(0) + ". " + last_name + ": ";
-			}
-			
-			/*double total_items() {
-				double sum = 0.0;
-				for (int i = 0; i<num_items; i++) {
-					sum += ary[i].total();
-				}
-				return sum;
-			}*/
-				
+			}				
 		}
 		
 		// Set up scanner object to read space-separated values
@@ -81,10 +56,7 @@ public class A1Novice {
 			}
 			//Prints output in required format
 			System.out.println(c.name() + String.format("%.2f",sum));
-		}
-		
-
-		
+		}		
 	}
 }
 

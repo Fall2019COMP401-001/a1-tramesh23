@@ -8,12 +8,11 @@ public class A1Adept {
 		
 		class Item {
 		
-			//int quantity_items;
 			String name_item;
 			double price;
 			
+			//constructor for item
 			Item(String n, double p) {
-				//quantity_items = q;
 				name_item = n;
 				price = p;
 			}
@@ -59,14 +58,6 @@ public class A1Adept {
 			public String person() {
 				return first_name + " " + last_name + " (" + String.format("%.2f",money_spent) + ")";
 			}
-			
-			/*double total_items() {
-				double sum = 0.0;
-				for (int i = 0; i<num_items; i++) {
-					sum += ary[i].total();
-				}
-				return sum;
-			}*/
 				
 		}
 		
@@ -77,10 +68,10 @@ public class A1Adept {
 			
 		// My code follows here.
 		
-		// Read in count of customers to process
+		// Read in count of items to process
 		
 		int count_items = scan.nextInt();
-		//makes array of Items
+		//makes array of items in store with their prices
 		Item item_ary[] = new Item[count_items];
 		for (int i = 0; i<count_items; i++) {
 			item_ary[i] = new Item(scan.next(), scan.nextDouble());
@@ -138,7 +129,7 @@ public class A1Adept {
 			sum += customer_ary[i].getMoney();
 		}
 		
-		//output
+		//outputs in the required format
 		System.out.println("Biggest: " + customer_ary[max_price_index].person());
 		System.out.println("Smallest: " + customer_ary[min_price_index].person());
 		System.out.println("Average: " + String.format("%.2f",sum/customer_ary.length));
